@@ -1,4 +1,11 @@
 terraform {
+  backend "gcs" {
+    bucket = "hiren_lesson30_homework"
+    prefix = "terraform/state"
+  }
+}
+
+terraform {
   required_providers {
     template = {
       source = "hashicorp/template"
